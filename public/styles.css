@@ -1,0 +1,68 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1, h2 {
+    margin: 10px 0;
+}
+
+.btn {
+    cursor: pointer;
+    padding: 10px 15px;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 10px;
+    margin: 10px;
+    text-align: center;
+    display: inline-block;
+    width: 200px;
+    cursor: pointer;
+    position: relative;
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.icon-container {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none; /* Esconde os ícones por padrão */
+}
+
+.project-card:hover .icon-container {
+    display: block; /* Mostra os ícones ao passar o mouse */
+}
+
+.icon {
+    margin-left: 5px;
+    cursor: pointer;
+    color: #dc3545; /* Cor do ícone de delete */
+}
+
+.icon.edit {
+    color: #007bff; /* Cor do ícone de editar */
+}

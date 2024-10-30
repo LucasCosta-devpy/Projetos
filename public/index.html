@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <h1>Projetos</h1>
+    <button id="addProjectBtn" class="btn">➕ Adicionar Projeto</button>
+
+    <div id="projectForm" style="display: none;">
+        <h2>Cadastrar Projeto</h2>
+        <div class="card">
+            <input type="text" id="imageUrl" placeholder="URL da Imagem" required><br>
+            <input type="text" id="videoUrl" placeholder="URL do Vídeo" required><br>
+            <input type="text" id="description" placeholder="Descrição do Projeto" required><br>
+            <input type="text" id="author" placeholder="Autor" required><br>
+            <button id="saveProjectBtn" class="btn">Salvar</button>
+        </div>
+    </div>
+
+    <h2>Projetos Cadastrados</h2>
+    <div id="projectsList" class="projects-container"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
