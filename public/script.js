@@ -7,7 +7,7 @@ let editingProjectId = null; // Armazena o ID do projeto que está sendo editado
 
 // Função para carregar projetos
 async function loadProjects() {
-    const response = await fetch('http://localhost:3000/api/projetos');
+    const response = await fetch('https://projetos-production.up.railway.app/api/projetos'); // URL atualizada
     const projects = await response.json();
     projectsList.innerHTML = ''; // Limpa a lista antes de adicionar novos projetos
     projects.forEach(project => {
@@ -47,7 +47,7 @@ saveProjectBtn.onclick = async () => {
     // Verifica se estamos editando um projeto ou criando um novo
     if (editingProjectId) {
         // Atualiza o projeto
-        const response = await fetch(`http://localhost:3000/api/projetos/${editingProjectId}`, {
+        const response = await fetch(`https://projetos-production.up.railway.app/api/projetos/${editingProjectId}`, { // URL atualizada
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json'
@@ -64,7 +64,7 @@ saveProjectBtn.onclick = async () => {
         }
     } else {
         // Cria um novo projeto
-        const response = await fetch('http://localhost:3000/api/projetos', {
+        const response = await fetch('https://projetos-production.up.railway.app/api/projetos', { // URL atualizada
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -85,7 +85,7 @@ saveProjectBtn.onclick = async () => {
 // Função para deletar projeto
 async function deleteProject(id) {
     if (confirm('Você tem certeza que deseja deletar este projeto?')) {
-        const response = await fetch(`http://localhost:3000/api/projetos/${id}`, {
+        const response = await fetch(`https://projetos-production.up.railway.app/api/projetos/${id}`, { // URL atualizada
             method: 'DELETE'
         });
 
@@ -99,7 +99,7 @@ async function deleteProject(id) {
 
 // Função para editar projeto
 async function editProject(id) {
-    const response = await fetch(`http://localhost:3000/api/projetos/${id}`);
+    const response = await fetch(`https://projetos-production.up.railway.app/api/projetos/${id}`); // URL atualizada
     const project = await response.json();
     
     // Preenche o formulário com os dados do projeto

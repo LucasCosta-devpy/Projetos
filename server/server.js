@@ -95,7 +95,6 @@ app.put('/api/projetos/:id', (req, res) => {
     });
 });
 
-
 // Iniciar o servidor
 app.listen(PORT, () => {
     console.log(`Servidor rodando em http://localhost:${PORT}`);
